@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=New+Amsterdam&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Srijit Timsina</title>
+    <style>
+        *{
+            margin: 0;
+box-sizing: border-box;
+font-family: "Inter", serif;
+  font-weight: 400;
+  font-style: normal;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+           
+            color:black;
+            background-color:#F1F1F1;
+            height: 100vh;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #FFFFFF;
+            position:fixed;
+            padding: 30px 80px;
+            top:0;
+        }
+        .logo span{
+            font-weight: bolder;
+            font-size: 1.5rem;
+            color: #F44D0B;
+        }
+        .text{
+            display: flex;
+            gap:20px;
+            align-items: center;
+            flex-direction:row;
+        }
+        .text li{
+            list-style: none;
+        }
+        .text li a{
+            text-decoration: none;
+            color: black;
+        }
+       .main{
+        margin-top: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+       }
+       .about{
+        width:40%;
+        margin-top: 10vh;
+       }
+       .image img{
+        border-radius: 50%;
+       }
+       .main .about p{
+        color: #B1B3C0;
+       }
+        .form{
+            margin-top: 20vh;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #F9FAFB;
+            padding: 50px 20px;
+            align-items: center;
+            flex-direction: column;
+        }
+        .form form input,textarea{
+           width: 100%;
+           height: 5vh;
+           background-color: white;
+           border: 1px solid rgb(202, 202, 202);
+           border-radius: 8px;
+           padding: 20px;
+           height: 8vh;
+           font-size: 16px;
+        }
+       .about span{
+            font-size: 3rem;
+            font-weight: 400;
+       }
+       form{
+        background-color: white;
+        min-width: 50%;
+        padding: 30px;
+        box-shadow:8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 20px;
+       }
+       b{
+        font-weight: bolder;
+       }
+       .form form input[type="submit"]{
+        background-color: #F44D0B;
+        padding: 0;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+       }
+
+       @media (max-width: 768px) {
+        nav {
+            padding: 15px 20px;
+            flex-wrap: wrap;
+        }
+
+        .text {
+            gap: 10px;
+        }
+
+        .main {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 15vh;
+        }
+
+        .about {
+            width: 80%;
+            text-align: center;
+        }
+
+        .image img {
+            margin-top: 20px;
+        }
+
+        .form {
+            padding: 30px 10px;
+        }
+
+        form {
+            min-width: 80%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo span {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            padding: 10px 15px;
+        }
+
+        .main {
+            margin-top: 10vh;
+        }
+
+        .about span {
+            font-size: 2rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+<span>Srijit Timsina</span>
+        </div>
+        <div class="text">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#form">Contact Me</a></li>
+        </div>
+    </nav>
+<div class="main">
+    <div class="about">
+        <div class="hea">
+        <p>HELLO,</p>
+    </div>
+        <span>I'm <b>Srijit</b> <br>a Web Enthusiast</span>
+        <p style="line-height: 23px;">I am passionate about programming and love creating web-based applications and projects. With experience in using technologies like HTML,CSS,JavaScript,PHP and others.</p>
+    </div>
+    <div class="image">
+        <img src="image.jpeg" alt="Pic">
+    </div>
+</div>
+    <div class="form" id="form">
+        <h1 style="font-weight: 600; color: #F44D0B;">Contact Me</h1>
+        <form method="post" onsubmit="return validation()" action="https://api.web3forms.com/submit" >
+            <input type="hidden" name="from_name" value="Message From Your Portfolio">
+            <input type="hidden" name="redirect" value="https://srijit-timsina.github.io/Anawarat/thanks.html">
+            <input type="hidden" name="access_key" value="07b28757-9fbb-4d57-884e-800df8ed030e">
+            <input type="text" placeholder="Name*" name="Name" class="c1"><br><br>
+            <input type="number" placeholder="Phone" name="Phone" class="c2"><br><br>
+            <input type="text" placeholder="Email*" name="Email" class="c3"><br><br>
+            <textarea name="message" placeholder="Message*" class="c4"></textarea><br><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+    <style>
+        footer{
+            background-color: #DDDDDD;
+            height: 15vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 20px;
+            align-items: center;
+        }
+        .links{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .fot{
+            line-height: 2rem;
+        }
+    </style>
+    <footer>
+        <div class="fot">
+        <p style="font-size: large;">Connect With ME</p>
+        <div class="links">
+        <a href="https://github.com/srijit-timsina"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.facebook.com/sjrijit.timsina/"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/srijit-timsina-76182b337/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/shrijittimsina/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
